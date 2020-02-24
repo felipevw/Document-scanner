@@ -1,0 +1,13 @@
+﻿  document_scanner.cpp
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(101,13): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(156,46): warning C4244: 'argumento': conversión de 'int' a '_Tp'; posible pérdida de datos
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(156,46): warning C4244:         with
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(156,46): warning C4244:         [
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(156,46): warning C4244:             _Tp=float
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(156,46): warning C4244:         ]
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(157,62): warning C4244: 'argumento': conversión de 'int' a '_Tp'; posible pérdida de datos
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(157,62): warning C4244:         with
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(157,62): warning C4244:         [
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(157,62): warning C4244:             _Tp=float
+D:\C++\document_scanner\document_scanner\document_scanner.cpp(157,62): warning C4244:         ]
+  document_scanner.vcxproj -> D:\C++\document_scanner\x64\Debug\document_scanner.exe

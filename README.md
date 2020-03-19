@@ -1,4 +1,7 @@
 # Document Scanner
-An image processing based document scanner pipeline
 
-Full description soon
+This is an image processing based document scanner pipeline.
+
+Dependencies:
+
+> OpenCV 4.X

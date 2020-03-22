@@ -11,6 +11,9 @@ Dependencies:
 Result examples:
 
 
-<img1 src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/test1.jpg" width="100">
+<img1 src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/scanned-form.jpg" width="100">
+<img2 src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/img_adjust.JPG" width="100">
+<img3 src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/scanned_img.jpg" width="100">
 
-![test](img1)
+
+![test](img1, img2, img3)

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <opencv2/highgui.hpp>
 #include <opencv2/opencv.hpp>
+#include <string>
+
 
 using namespace std;
 using namespace cv;
@@ -13,6 +15,7 @@ using namespace cv;
 Mat result;
 Point2f vertices[4];
 RotatedRect rotrect;
+
 
 int roiIndex{};
 bool dragging;
@@ -26,15 +29,10 @@ void changePoints(int action, int x, int y, int flags, void* userdata);
 
 int main()
 {
-	/*// Input image
-	cout << "This is a document scanner application.\n"
-		"Enter the directory of the image or press h to obtain help." << endl;
-
 	string image;
+	cout << "Input the image file: " << endl;
 	cin >> image;
 	Mat frame = imread(image, IMREAD_COLOR);
-	*/
-	Mat frame = imread("test1.jpg", IMREAD_COLOR);
 
 	// Check frame was read
 	if (frame.empty())
@@ -42,6 +40,7 @@ int main()
 		cout << "No image was found" << endl;
 		std::exit(1);
 	}
+
 
 	// Create output parameters
 	const float height_img{ static_cast<float>(frame.rows) };
@@ -54,17 +53,19 @@ int main()
 	const int diam{ 60 };
 	const double sigmaColor{ 120.0 }, sigmaSpace{ 120.0 };
 	bilateralFilter(frame, bilateralFiltered, diam, sigmaColor, sigmaSpace);
-	
+	cout << "Image filtered." << endl;
+
 
 	// GrabCut operation
 	Mat mask;
 	Mat bgdModel, fgdModel;
-	const int imgReduce{ 5 };
+	const int imgReduce{ 10 };
 	Rect rect(imgReduce, imgReduce, frame.cols - imgReduce, frame.rows - imgReduce);
 	grabCut(bilateralFiltered, mask, rect, bgdModel, fgdModel, 1, GC_INIT_WITH_RECT);
 	compare(mask, GC_PR_FGD, mask, CMP_EQ);
 	Mat foreground(frame.size(), CV_8UC3, cv::Scalar(0, 0, 0));
 	frame.copyTo(foreground, mask);
+	cout << "GrabCut performed." << endl;
 
 
 	// Threshold operation
@@ -72,7 +73,8 @@ int main()
 	cvtColor(foreground, imgGray, COLOR_BGR2GRAY);
 	Mat imgThres;
 	threshold(imgGray, imgThres, 100.0, 150.0, THRESH_BINARY);
-
+	cout << "Image thresholded." << endl;
+	
 
 	// Open operation
 	Mat imageMorphOpened;
@@ -173,10 +175,9 @@ int main()
 	Mat im_warped;
 	warpPerspective(frame, im_warped, h, outDim);
 
-	// Scanned Document
-	imshow("Warpped Image", im_warped);
-	waitKey(0);
 
+	// Scanned Document
+	imwrite("scanned_img.jpg", im_warped);
 	return 0;
 }
 

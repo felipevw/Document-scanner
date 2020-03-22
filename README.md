@@ -11,9 +11,7 @@ Dependencies:
 Result examples:
 
 
-<img src1="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/scanned-form.jpg">
-<img src2="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/img_adjust.JPG" width="100">
-<img src3="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/scanned_img.jpg" width="100">
+<img src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/scanned-form.jpg" width="200">
+<img src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/img_adjust.JPG" width="200">
+<img src="https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/scanned_img.jpg" width="200">
 
-![an](src2)
-![Original Image]("https://github.com/felipevw/Document-scanner/blob/master/document_scanner/document_scanner/images/scanned-form.jpg")
